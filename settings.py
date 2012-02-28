@@ -1,8 +1,8 @@
 # Django settings for cracket project.
 import os
 
-DEV = False
-DEBUG = False
+DEV = True
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
