@@ -1,0 +1,195 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    font-family:'Doppio One', arial;
+}
+html{
+    background:yellow;
+}
+div#container{
+    width:960px;
+    margin:0 auto;
+}
+div#sidebar{
+    width:200px;
+    padding:10px;
+    text-align:center;
+    float:left;
+}
+div#sidebar h1{
+    background:black;
+    font-size:40px;
+    margin-bottom:10px;
+    padding:4px 0;
+    -moz-transform:rotate(-2deg);
+    -webkit-transform:rotate(-2deg);
+    -o-transform:rotate(-2deg);
+    transform:rotate(-2deg);
+}
+div#sidebar h1 a{
+    color:white;
+    text-decoration:none;
+}
+div#sidebar div#footer{
+    margin-top:40px;
+    font-size:9px;
+    text-align:center;
+}
+div#sidebar div#footer a{
+    color:#555;
+    text-decoration:none;
+}
+div#sidebar div#footer a:hover{
+    text-decoration:underline;
+}
+div#content{
+    padding:10px 0;
+    width:730px;
+    float:right;
+}
+div#content ul li{
+    margin-left:20px;
+}
+div#content h2{
+    font-size:30px;
+    margin:13px 0;
+}
+div#content h2 a{
+    color:black;
+}
+div#content div#institutes a#institute{
+    -moz-transition-duration:1s;
+    -webkit-transition-duration:1s;
+    -o-transition-duration:1s;
+    transition-duration:1s;
+    display:block;
+    background:rgba(255,255,255,.45);
+    margin-bottom:10px;
+    box-shadow:0 0 2px black;
+    color:black;
+    text-decoration:none;
+    font-size:40px;
+    width:710px;
+    padding:5px 10px;
+}
+div#content div#institutes a#institute:hover{
+    margin-left:50px;
+    background:rgb(255,0,0);
+    color:white;
+}
+div#content div#institutes a#institute.green:hover{
+    background:rgb(0,255,0);
+    color:black;
+}
+div#content div#persons a#person{
+    -moz-transition-duration:1s;
+    -webkit-transition-duration:1s;
+    -o-transition-duration:1s;
+    transition-duration:1s;
+    display:block;
+    background:rgba(255,255,255,.45);
+    margin-bottom:10px;
+    box-shadow:0 0 2px black;
+    color:black;
+    text-decoration:none;
+    font-size:40px;
+    width:710px;
+    padding:5px 10px;
+}
+div#content div#persons a#person:hover{
+    margin-left:50px;
+    background:rgb(255,0,0);
+    color:white;
+}
+div#content div#persons a#person.green:hover{
+    background:rgb(0,255,0);
+    color:black;
+}
+div#content div#person{
+    text-align:center;
+    margin-bottom:20px;
+}
+div#content div#person div#personcontent h2{
+    text-align:left;
+}
+div#content div#person img{
+    -moz-transition-duration:1s;
+    -webkit-transition-duration:1s;
+    -o-transition-duration:1s;
+    transition-duration:1s;
+    float:left;
+    max-height:100px;
+    max-width:100px;
+}
+div#content div#person img:hover{
+    max-height:80%;
+    max-width:80%;
+}
+div#content div#person div#personcontent{
+    float:right;
+    width:620px;
+}
+div#content div#person h3{
+    margin:10px 0;
+    text-align:left;
+    background:#555;
+    color:white;
+}
+div#content div#person div.comment{
+    text-align:left;
+    margin-bottom:10px;
+    border-bottom:1px #555 solid;
+}
+form{
+    padding:0 0px;
+}
+form h2{
+    font-size:40px;
+    border-bottom:1px black solid;
+    padding-bottom:5px;
+    margin:0 0 10px;
+}
+form input, form textarea{
+    background:#555;
+    color:#fff;
+    display:block;
+    padding:5px;
+    margin:0 0 10px;
+    font-size:25px;
+    -moz-transition-duration:1s;
+    -webkit-transition-duration:1s;
+    -o-transition-duration:1s;
+    transition-duration:1s;
+}
+form textarea{
+    height:35px;
+}
+form input[type="button"], form input[type="submit"]{
+    cursor:pointer;
+}
+form input:hover, form input:focus, form textarea:hover, form textarea:focus{
+    background:#fff;
+    color:#555;
+    outline:none;
+}
+form textarea:hover, form textarea:focus{
+    height:100px;
+}
+form input[type="file"]{
+    opacity:0;
+    height:0px;
+    padding:0;
+    margin:0;
+}
+div.clear{
+    clear:both;
+}
+.tiny{
+    font-size:9px;
+}
+.biggest{
+    margin-top:200px;
+    font-size:60px;
+    text-align:center;
+}

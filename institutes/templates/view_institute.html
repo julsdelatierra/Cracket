@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block title%}{{institute.name}}{%endblock%}
+{%block content%}
+<div id="person">
+    <img src="{{MEDIA_URL}}/{{institute.image}}" alt="" />
+    <div id="personcontent">
+        <h2>{{institute.name}}</h2>
+    </div>
+    <div class="clear"></div>
+    {%if institute.comments.all%}
+    <h3>Comentarios sobre esta institución</h3>
+    {%for comment in institute.comments.all%}
+    <div class="comment">
+        <p>{{comment.text}}</p>
+        <!--<p class="tiny">Hace: {{comment.creation_date|timesince}}</p>-->
+    </div>
+    {%endfor%}
+    {%else%}
+    <h3>No hay comentarios de esta institución, sé el primero en comentar.</h3>
+    {%endif%}
+    {%include 'comment_form_institute.html'%}
+</div>
+<h2>También puedes comentar sobre las personas de esta institución:</h2>
+<h2>Personas @ <a href="/{{institute.id}}">{{institute.name}}</a></h2>
+<div id="persons">
+    {%for character in characters%}
+    <a id="person" href="/char/{{character.id}}">>> {{character.name}}</a>
+    {%endfor%}
+    <a id="person" class="green" href="/char/create/{{institute.id}}">+ Agregar persona</a>
+</div>
+{%endblock%}

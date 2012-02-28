@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+
+{%block content%}
+    <h2>Instituciones @ <a href="/">{{name}}</a></h2>
+    <div id="institutes">
+        {%for institute in institutes%}
+        <a href="/{{institute.id}}" id="institute">>> {{institute.name}}</a>
+        {%endfor%}
+        <a href="/create" id="institute" class="green">+ Agrega tu institución</a>
+    </div>
+{%endblock%}

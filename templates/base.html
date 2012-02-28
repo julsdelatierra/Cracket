@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <title>{%block title%}{{name}}{%endblock%}</title>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{MEDIA_URL}}/static/style.css" />
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <h1>
+                <a href="/">{{name}}</a>
+            </h1>
+            <p>Porque la libertad de expresión es un derecho.</p>
+            <br />
+            <p>
+                Cracket es un buzón de quejas y comentarios anónimos.
+            </p>
+            <div id="footer">
+                <a href="/privacy">Privacidad</a> | <a href="/tos">Terminos de servicio</a> | <a href="/about">Acerca de</a>
+                <br />
+                <br />
+                <br />
+                <p>
+                    {{name}} &copy; {{year}}
+                </p>
+            </div>
+        </div>
+        <div id="content">
+            {%block content%}{%endblock%}
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{MEDIA_URL}}/static/scripts.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20622712-8']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</body>
+</html>

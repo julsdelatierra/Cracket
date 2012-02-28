@@ -1,0 +1,5 @@
+<form action="/comment/institute/{{institute.id}}" method="post">
+    {%csrf_token%}
+    <textarea name="text" id="" cols="30" rows="10" placeholder="Escribe aquí tu comentario ..." required></textarea>
+    <input type="submit" value="Enviar" />
+</form>

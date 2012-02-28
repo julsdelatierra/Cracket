@@ -1,0 +1,6 @@
+# python <= 2.6 requerido
+# requerimentos para pikhub
+django==1.2.5
+pil
+pysqlite
+python-dateutil
