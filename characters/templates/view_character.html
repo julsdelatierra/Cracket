@@ -4,19 +4,19 @@
     <div id="person">
         <img src="{{MEDIA_URL}}/{{character.image}}" alt="" />
         <div id="personcontent">
-            <h2>{{character}} @ <a href="/{{institute.id}}"> {{institute.name}}</a></h2>
+            <h2>{{character.name}}({{character.alias}}) at <a href="/{{institute.id}}"> {{institute.name}}</a></h2>
         </div>
         <div class="clear"></div>
         {%if character.comments.all%}
-        <h3>Comentarios</h3>
+        <h3>Comentarios({{character.comments.count}})</h3>
         {%for comment in character.comments.all%}
         <div class="comment">
             <p>{{comment.text}}</p>
-            <!--<p class="tiny">Hace: {{comment.creation_date|timesince}}</p>-->
+            <p class="tiny red">Hace: {{comment.creation_date|timesince}}</p>
         </div>
         {%endfor%}
         {%else%}
-        <h3>No hay comentarios, sé el primero en comentar.</h3>
+        <h3>↓ No hay comentarios sobre esta persona, sé el primero en comentar.</h3>
         {%endif%}
         {%include 'comment_form_char.html'%}
     </div>

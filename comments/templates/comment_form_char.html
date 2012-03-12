@@ -1,5 +1,11 @@
+{%if request.GET.said%}
+<div class="alert">Esto ya está dicho.</div>
+{%endif%}
+{%if request.GET.unavailable%}
+<div class="alert">No puedes usar esas palabras aquí.</div>
+{%endif%}
 <form action="/comment/character/{{character.id}}" method="post">
     {%csrf_token%}
     <textarea name="text" id="" cols="30" rows="10" placeholder="Escribe aquí tu comentario ..." required></textarea>
-    <input type="submit" value="Enviar" />
+    <input type="submit" value="Publicar" />
 </form>

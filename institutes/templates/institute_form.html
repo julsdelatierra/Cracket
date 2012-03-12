@@ -2,6 +2,7 @@
     <h2>Nueva institución</h2>
     {%csrf_token%}
     <input type="text" name="name" placeholder="Nombre" required />
+    <input type="text" name="alias" placeholder="Twitter" required />
     <input type="file" name="image" id="image" required accept="image/*" size="1" />
     <input id="imagefake" type="button" value="Selecciona una imagen ..." />
     <input type="submit" value="Crear" />

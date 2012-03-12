@@ -1,8 +1,9 @@
-# Django settings for cracket project.
+#!/usr/bin/python
+#encoding:utf-8
 import os
 
-DEV = True
-DEBUG = True
+DEV = False
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -42,6 +43,11 @@ if not DEV:
             'PORT': '',
         }
     }
+
+CONSUMER_KEY_TWITTER = '5WefON5Cf5J10hsinLSRw'
+CONSUMER_SECRET_TWITTER = 'iFlzCeCgfeGZcO26fahobQaLZ0mQnot3J31RnMyTYc'
+TOKEN_TWITTER = '520686092-PCJHwOsj3weXJgvMx38Jno7BnnPYhdA4l6606waj'
+SECRET_TOKEN_TWITTER = 'tWnrdHXMGsGkmHAr5YdhvsFeq7kc4AXd8RuNqOoiFQ'
 
 TIME_ZONE = 'America/Chicago'
 
@@ -107,4 +113,23 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.csrf',
     'context_processors.default',
+)
+
+UNAVAILABLE_WORDS = (
+    u'fuck',
+    u'put(a|o|as|os|erias)',
+    u'pendej(a|o|os|as|adas|á|ó|ós|ás|ádas|adás)',
+    u'ching(a|á|ada|áda|adá|ádá)',
+    u'cul(o|ón|on|ó)',
+    u'pene',
+    u'vagina',
+    u'caga(r|ste|on|ón)',
+    u'pinche',
+    u'cabr(on|ón)',
+    u'maric(a|ón|on)',
+    u'mi(e|a)rda',
+    u'caca',
+    u'pelan(a|ah|á|áh|ha|há)',
+    u'coñ(o|azo|aso)',
+    u'estupid(o|a|os|as|ó|á|ós|ás)',
 )

@@ -5,17 +5,18 @@
     font-family:'Doppio One', arial;
 }
 html{
-    background:yellow;
+    background:#FF7;
 }
 div#container{
     width:960px;
     margin:0 auto;
 }
 div#sidebar{
-    width:200px;
+    width:199px;
     padding:10px;
     text-align:center;
     float:left;
+    border-right:1px black solid;
 }
 div#sidebar h1{
     background:black;
@@ -26,10 +27,12 @@ div#sidebar h1{
     -webkit-transform:rotate(-2deg);
     -o-transform:rotate(-2deg);
     transform:rotate(-2deg);
+    box-shadow:0 0 5px black;
 }
 div#sidebar h1 a{
     color:white;
     text-decoration:none;
+    text-shadow:inset 0 0 5px black;
 }
 div#sidebar p a{
     color:white;
@@ -59,7 +62,15 @@ div#content h2{
     font-size:30px;
     margin:13px 0;
 }
-div#content h2 a{
+div#content h3{
+    font-size:24px;
+    margin:13px 0;
+}
+div#content h4{
+    font-size:20px;
+    margin:13px 0;
+}
+div#content h2 a, div#content h4 a{
     color:black;
 }
 div#content div#institutes a#institute{
@@ -77,12 +88,12 @@ div#content div#institutes a#institute{
     width:710px;
     padding:5px 10px;
 }
-div#content div#institutes a#institute:hover{
+div#content div#institutes a#institute:hover, div#content div#institutes a#institute:focus{
     margin-left:50px;
     background:rgb(255,0,0);
     color:white;
 }
-div#content div#institutes a#institute.green:hover{
+div#content div#institutes a#institute.green:hover, div#content div#institutes a#institute.green:focus{
     background:rgb(0,255,0);
     color:black;
 }
@@ -101,12 +112,12 @@ div#content div#persons a#person{
     width:710px;
     padding:5px 10px;
 }
-div#content div#persons a#person:hover{
+div#content div#persons a#person:hover, div#content div#persons a#person:focus{
     margin-left:50px;
     background:rgb(255,0,0);
     color:white;
 }
-div#content div#persons a#person.green:hover{
+div#content div#persons a#person.green:hover, div#content div#persons a#person.green:focus{
     background:rgb(0,255,0);
     color:black;
 }
@@ -125,32 +136,34 @@ div#content div#person img{
     float:left;
     max-height:100px;
     max-width:100px;
-}
-div#content div#person img:hover{
-    max-height:80%;
-    max-width:80%;
+    box-shadow:0 0 5px black;
+    
 }
 div#content div#person div#personcontent{
-    float:right;
+    float:left;
     width:620px;
+    margin-left:10px;
 }
 div#content div#person h3{
-    margin:10px 0;
+    margin:30px 0 25px;
     text-align:left;
-    background:#555;
-    color:white;
+    background:none;
+    color:black;
+    font-family:arial;
+    font-weight:normal;
 }
 div#content div#person div.comment{
     text-align:left;
-    margin-bottom:10px;
-    border-bottom:1px #555 solid;
+    margin-bottom:15px;
+    padding:5px 10px;
+    background:rgba(255,255,255,.5);
+    box-shadow:0 0 4px black;
 }
 form{
     padding:0 0px;
 }
 form h2{
     font-size:40px;
-    border-bottom:1px black solid;
     padding-bottom:5px;
     margin:0 0 10px;
 }
@@ -165,9 +178,15 @@ form input, form textarea{
     -webkit-transition-duration:1s;
     -o-transition-duration:1s;
     transition-duration:1s;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    -o-border-radius:6px;
+    border-radius:6px;
+    box-shadow:0 0 2px black;
+    padding:5px 10px;
 }
 form textarea{
-    height:35px;
+    height:30px;
 }
 form input[type="button"], form input[type="submit"]{
     cursor:pointer;
@@ -176,6 +195,7 @@ form input:hover, form input:focus, form textarea:hover, form textarea:focus{
     background:#fff;
     color:#555;
     outline:none;
+    box-shadow:0 0 5px black;
 }
 form textarea:hover, form textarea:focus{
     height:100px;
@@ -189,8 +209,25 @@ form input[type="file"]{
 div.clear{
     clear:both;
 }
+.alert{
+    font-size:20px;
+    background:pink;
+    border:1px red solid;
+    font-family:arial;
+    margin-bottom:20px;
+    color:red;
+    text-shadow:0 1px 1px white;
+    padding:10px;
+}
+.dotted{
+    border:1px black dotted;
+    margin-bottom:10px;
+}
 .tiny{
-    font-size:9px;
+    font-size:10px;
+}
+.red{
+    color:red;
 }
 .biggest{
     margin-top:200px;

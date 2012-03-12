@@ -2,5 +2,7 @@
 # requerimentos para pikhub
 django==1.2.5
 pil
+oauth2
 pysqlite
 python-dateutil
+django-piston

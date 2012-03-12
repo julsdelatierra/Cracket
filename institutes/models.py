@@ -5,6 +5,7 @@ from characters.models import Character
 
 class Institute(models.Model):
     name = models.CharField(max_length=250)
+    alias = models.CharField(max_length=250, default="")
     image = models.ImageField(upload_to='uploads/institutes/')
     comments = models.ManyToManyField(Comment, related_name='institute_comments')
     characters = models.ManyToManyField(Character, related_name='characters')
